@@ -67,14 +67,37 @@ CIRCUIT DIAGRAM
 
 
 **PROGRAM** 
- 
+ ```int led=4;
+int sensorpot;
+void setup()
+{
+  pinMode(led, OUTPUT);
+  Serial.begin(9600);
+  
+}
 
-
-
-
-
-
-
+void loop()
+{
+  sensorpot=analogRead(A0);
+  Serial.print("data=");
+  Serial.println(sensorpot);
+  delay(500);
+  if (sensorpot>500)
+  {
+    digitalWrite(led,HIGH);
+      delay(100);
+    digitalWrite(led,LOW);
+      delay(100);
+  }
+  else
+  {
+    digitalWrite(led,LOW);
+  }
+    
+  
+}
+```
+<img width="452" alt="EX-02(2)" src="https://github.com/Keerthana-VJ/EXPERIMENT-NO--02-INTERFACING-ANALOG-INPUT-SENSOR-POT-WITH-ARDUINO-/assets/149347704/f99d6dc3-e789-4a9b-b527-e315607b2029">
 
 
 **
@@ -82,7 +105,10 @@ CIRCUIT DIAGRAM
 **
 
 
-[My image](username.github.com/repository/img/image.jpg)
+<img width="673" alt="EX-02" src="https://github.com/Keerthana-VJ/EXPERIMENT-NO--02-INTERFACING-ANALOG-INPUT-SENSOR-POT-WITH-ARDUINO-/assets/149347704/7eecad5c-eb70-404a-981b-85bde79548d0">
+
+<img width="451" alt="EX-02(1)" src="https://github.com/Keerthana-VJ/EXPERIMENT-NO--02-INTERFACING-ANALOG-INPUT-SENSOR-POT-WITH-ARDUINO-/assets/149347704/1cd87979-96f5-4c28-951c-57ad8b333640">
+
 
 
 
